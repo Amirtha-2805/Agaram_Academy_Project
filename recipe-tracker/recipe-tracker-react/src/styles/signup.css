@@ -1,0 +1,19 @@
+.form-control{
+    width:150%
+}
+.input{
+    border:1px solid black;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    line-height: 30px;
+    justify-content: center;
+    align-items: center;
+    width:50%;
+    margin-left: 300px;
+    border-radius: 30px;
+    /* background-color: pink; */
+}
+label{
+    font-weight: bold;
+}

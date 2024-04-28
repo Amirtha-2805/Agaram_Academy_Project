@@ -1,0 +1,19 @@
+.admin{
+    background-color: yellowgreen;
+    width:20%;
+    height:100vh;
+    margin-top: -50px;
+}
+.heading{
+    padding-left: 37px;
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+.admin-feature{
+    display: flex;
+    flex-direction: column;
+    gap:50px;
+    list-style: none;
+    margin-left: 55px;
+    
+}
