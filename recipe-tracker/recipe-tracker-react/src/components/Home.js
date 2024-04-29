@@ -2,7 +2,7 @@ import NavBar from "./Menu";
 import "../styles/home.css"
 import { useState } from "react";
 
-const openAiAPI=process.env.NEXT_PUBLIC_OPENAI_API_KEY
+const openAiAPI = process.env.NEXT_PUBLIC_OPENAI_API_KEY
 
 export default function Home(){
 
@@ -17,7 +17,7 @@ export default function Home(){
         let model='gpt-3.5-turbo'
         let ingredientsToSend={
             role:'user',
-            content:ingredientsInput+question
+            content:ingredientsInput
         }
 
            let response=await fetch(url,{
@@ -38,18 +38,20 @@ export default function Home(){
     }
     return(
         <>
+        <div className="home-body">
             <NavBar/>
             <center>
             <div className="input-ingredients">        
-                <label>Enter ingredients to get your special recipe..!</label>
-                    <h6>Enter ingredients seperate by comma</h6>
+                <label className="homelabel">Enter ingredients to get your special recipe..!</label>
+                    <h6 className="homehint">Enter ingredients seperate by comma</h6>
                     
                         <div className="ingredients">                      
-                            <input type="text" placeholder="Eg. Water,sugar" className="form-control" onKeyUp={(e)=>setIngredientsInput(e.target.value)}/>
+                            <input type="text" placeholder="Eg. Water,sugar" className="form-control" onChange={(e)=>setIngredientsInput(e.target.value)}/>
                             <button type="button" className="btn btn-success" onClick={submitIngredients}>Submit</button>
                         </div>                                            
             </div>
             </center>
+            </div>
         </>
 
     )

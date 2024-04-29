@@ -7,6 +7,7 @@ import LoginAdmin from './components/LoginAdmin';
 import Userlogin from './components/UserLogin';
 import AdminHome from './components/AdminHome';
 import UserHome from './components/UserHome';
+import Auth from './components/Auth';
 function App() {
   return (
     <div className="App">
@@ -18,6 +19,7 @@ function App() {
             <Route path='/userlogin' element={<Userlogin/>}/>
             <Route path='/adminhome' element={<AdminHome/>}/>
             <Route path='/userhome' element={<UserHome/>}/>
+            <Route path='/auth' element={<Auth/>}/>
 
 
 

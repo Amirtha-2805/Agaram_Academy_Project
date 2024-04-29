@@ -1,18 +1,30 @@
+import { Link } from "react-router-dom"
 import "../styles/adminhome.css"
+import { useNavigate } from "react-router-dom";
 export default function AdminHome(){
+    const navigate = useNavigate();
+    const adminLogOut=()=>{
+        navigate("/")
+    }
     return(
         <>
-        <center><h3>Admin Home</h3></center>
+        <div className="adminbody">
+        <center><h3 className="adminhead">Admin Home</h3></center>
         <div className="admin">
-        <h4 className="heading"><b>AdminFeatures</b></h4>
+        <h4 className="adminhometitle"><b>AdminFeatures</b></h4>
         <ul className="admin-feature">
-            <li>UserList</li>
-            <li>All Recipes</li>
-            <li>Add Recipes</li>
+            <li className="userlist"><Link className="link">UserList</Link></li>
+            <li className="allRecipes"><Link className="link">All Recipes</Link></li>
+            <li className="addrecipes"><Link className="link">Add Recipes</Link></li>
+            <li className="addrecipes"><Link className="link" to={"/"}>Home</Link></li>
+
         </ul>
         <center>
-        <button className="btn btn-danger">Logout</button>
+            <div className="adminlogout">
+        <button className="btn btn-danger" onClick={adminLogOut}>Logout</button>
+        </div>
         </center>
+        </div>
         </div>
         </>
 

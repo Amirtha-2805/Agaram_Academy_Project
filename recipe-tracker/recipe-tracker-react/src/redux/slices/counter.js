@@ -9,7 +9,8 @@ export const counterSlice=createSlice({
             password:"",
             age:"",
             gender:"",
-            phone:""
+            phone:"",
+            address:""
         },
         userlogin:{
             email:"",

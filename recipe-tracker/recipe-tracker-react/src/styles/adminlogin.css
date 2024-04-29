@@ -1,5 +1,5 @@
 .adminlogin{
-    border:1px solid black;
+    /* border:1px solid black; */
     display: flex;
     flex-direction: column;
     /* align-content: center; */
@@ -12,4 +12,19 @@
     margin-top: 20px;
     margin-right: 20px;
     /* background-color: pink; */
+}
+.adminloginbtn{
+    margin-left: 10px;
+}
+.admintitle{
+    margin-left: -10px;
+    color: white;
+}
+.admin-login-body{
+    background: linear-gradient(#0c0e1d,#2b2c28);
+    background-size: cover;
+    height: 100vh;
+}
+.admin-login-label{
+    color: white;
 }
